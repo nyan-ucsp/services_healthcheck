@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Health Check Service every 10 seconds
+After=network.target
+
+[Timer]
+OnBootSec=10sec
+OnUnitActiveSec=10sec
+Unit=services_health_check.service
+
+[Install]
+WantedBy=timers.target
